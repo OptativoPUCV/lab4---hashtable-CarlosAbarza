@@ -109,7 +109,7 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
   long pos = map->current + 1;
   for (long i = 0; i < map->capacity - 1; i++, pos++) {
-    if (map->buckets[pos]->key){
+    if (map->buckets[pos]){
       map->current = pos;
       return map->buckets[pos];
     }

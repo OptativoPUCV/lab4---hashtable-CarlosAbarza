@@ -58,3 +58,14 @@ Tue 11 Apr 2023 08:55:42 PM UTC:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 c10142f
+Tue 11 Apr 2023 08:56:02 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:82:8: error: unused variable ‘indiceH’ [-Werror=unused-variable]
+   82 |   long indiceH = hash(key, map->capacity);
+      |        ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9ec9607

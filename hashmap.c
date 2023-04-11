@@ -83,13 +83,13 @@ Pair * searchMap(HashMap * map,  char * key) {
   for (int i = 0; i < map->capacity;i++) {
     /*if (map->buckets[indiceH]->key == NULL)
       return NULL;*/
-    if (is_equal(key, map->buckets[indiceH]->key)) {
+    /*if (is_equal(key, map->buckets[indiceH]->key)) {
       map->current = indiceH;
       return map->buckets[indiceH];
     }
     indiceH++;
     if (indiceH == map->capacity)
-      indiceH = 0;
+      indiceH = 0;*/
   }
   return NULL;
 }

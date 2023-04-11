@@ -69,3 +69,25 @@ hashmap.c:82:8: error: unused variable ‘indiceH’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 9ec9607
+Tue 11 Apr 2023 08:56:16 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:84:5: error: "/*" within comment [-Werror=comment]
+   84 |     /*if (map->buckets[indiceH]->key == NULL)
+      |      
+hashmap.c: At top level:
+hashmap.c:93:5: error: expected identifier or ‘(’ before ‘/’ token
+   93 |   }*/
+      |     ^
+hashmap.c:95:1: error: expected identifier or ‘(’ before ‘}’ token
+   95 | }
+      | ^
+hashmap.c: In function ‘searchMap’:
+hashmap.c:93:3: error: control reaches end of non-void function [-Werror=return-type]
+   93 |   }*/
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+13f8f9a

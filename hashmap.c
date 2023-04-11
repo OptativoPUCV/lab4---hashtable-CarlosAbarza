@@ -45,6 +45,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   while (indiceH < map->capacity) {
     if (!map->buckets[indiceH] || !map->buckets[indiceH]->key) {
       map->buckets[indiceH] = aux;
+      map->size++;
       return;
     }
     indiceH++;

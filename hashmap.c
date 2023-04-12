@@ -111,7 +111,7 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-  long pos = (map->current + 1) % map->size;
+  long pos = (map->current + 1) % map->capacity;
   for (long i = 0; i < map->capacity - 1; i++, pos++) {
     if (!map->buckets[pos]) {
       if (pos == map->capacity)

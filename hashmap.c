@@ -120,6 +120,8 @@ Pair * nextMap(HashMap * map) {
     }
     if (map->buckets[pos]->key) {
       map->current = pos;
+      if (pos == map->current) 
+        return NULL;
       return map->buckets[pos];
     }
     if (pos == map->capacity)

@@ -125,7 +125,7 @@ Pair * nextMap(HashMap * map) {
   long primer = map->current;
   for (long i = 0; i < map->capacity; i++,pos++) {
     if (pos == map->capacity)
-      pos = -1;
+      pos = 0;
     if (pos == primer)
       break;
     if (map->buckets[pos])

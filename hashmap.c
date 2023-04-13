@@ -128,11 +128,12 @@ Pair * nextMap(HashMap * map) {
       pos = 0;
     if (pos == primer)
       break;
-    if (map->buckets[pos])
+    if (map->buckets[pos]) {
       if (map->buckets[pos]->key) {
         map->current = pos;
         return map->buckets[pos];
       }
+    }
   }
   return NULL;
 }

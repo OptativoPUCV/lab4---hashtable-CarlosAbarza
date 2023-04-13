@@ -123,7 +123,7 @@ Pair * nextMap(HashMap * map) {
       return map->buckets[pos];
     }
     if (pos == map->capacity)
-      pos = 0;
+      pos = -1;
   }
   return NULL;
 }

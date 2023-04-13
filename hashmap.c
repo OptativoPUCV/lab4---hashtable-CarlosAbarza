@@ -60,10 +60,9 @@ void insertMap(HashMap * map, char * key, void * value) {
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
   Pair **old_buckets = map->buckets;
-  map->buckets = (Pair**) calloc(map->capacity*2, sizeof(Pair*));
-  map->capacity *= 2;
-  map->size = 0;
-  map->current = -1;
+  long new_large = map->capacity;
+  free(map);
+  map = createMap(new_large);
   for (long i = 0; i < map->capacity/2; i++) {
     if (old_buckets[i]) {
       if (old_buckets[i]->key)

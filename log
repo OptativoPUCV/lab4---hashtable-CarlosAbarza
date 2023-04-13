@@ -261,3 +261,9 @@ Thu 13 Apr 2023 10:56:03 PM UTC:
  tests:  17|0
 total_score: 70/70
 ffdf60a
+Thu 13 Apr 2023 11:02:43 PM UTC: 
+ hashmap.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+ tests:  16|1
+total_score: 60/70
+80ad306

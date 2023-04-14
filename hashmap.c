@@ -121,19 +121,12 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
   long pos = (map->current + 1) % map->capacity;
-  firstMap(map);
-  long primer = map->current;
-  for (long i = 0; i < map->capacity; i++,pos++) {
-    if (pos == map->capacity)
-      pos = 0;
-    if (pos == primer)
-      break;
-    if (map->buckets[pos]) {
+  for (long i = map->current; i < map->capacity; i++,pos++) {
+    if (map->buckets[pos])
       if (map->buckets[pos]->key) {
         map->current = pos;
         return map->buckets[pos];
       }
-    }
   }
   return NULL;
 }
